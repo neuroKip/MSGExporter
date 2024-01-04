@@ -9,6 +9,9 @@ Note that this file format is used by other NDS games, but this tool was created
 github:
 -  https://github.com/neuroKip/MSGExporter
 
+Front Mission 2089 Border of Madness Translation Project Discord:
+-  [https://discord.gg/8ZD67Xxt](https://discord.gg/2ehkcvSuuk)
+
 -----------------------------------------------------------------------
 REQUIREMENTS
 -----------------------------------------------------------------------
