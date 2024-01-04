@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------
-ABOUT (V 1.0)
+ABOUT (V 1.1)
 -----------------------------------------------------------------------
 This tool is used to export text from a .msg binary file, a text format used in the NDS game Front Mission 2089: Border of Madness (FM2089).
 In addition the tool is also capable of converting plain text strings to a .msg.
