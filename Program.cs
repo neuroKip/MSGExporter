@@ -183,6 +183,7 @@ namespace MsgExporter
                     case "-h":
                     case "-help":
                         {
+                            Console.WriteLine(helpText);
                             return false;
                         }
 
