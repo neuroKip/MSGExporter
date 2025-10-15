@@ -24,16 +24,28 @@ HOW TO USE THE TOOL
 -----------------------------------------------------------------------
 Run the .exe with `-help` for a more detailed list of commands.
 
+ `-export` Extract text from a `.msg` into a `.txt`
+   `-tsv`   Export to a `.tsv` instead of `.txt`
+   `-font`  path/to/font.tsv
+   `-input` /path/to/.msg directories are also allowed
+   `-out`   User defined out path, otherwise default is ./Exporter/
+   `-debug` Print extra debug info to the output `.txt`
+
+`-convert` Convert a `.tsv` containing text to a `.msg`
+  `-font`  path/to/font.tsv
+  `-input` /path/to/.tsv directories are also allowed
+  `-out`   User defined out path, otherwise default is ./Converted/
+  
+`-skip` Do not wait for an input key at the end of the process (handy for batch jobs)
+
 ---------------------------
 HOW TO EXPORT
 ---------------------------
 Extract a .msg to plain text:
 `-export -font "path/to/font/table.tsv" -input "path/to/file.msg"`
 
-`-export` This will tell the tool to extract text from a .msg to a .txt
-
+`-export` This will tell the tool to extract text from a `.msg` into a `.txt` (use `-tsv` for Tabs Separated Values format, handy for pasting into a spreadsheet)
 `-font` The tool needs a look up table to be able to extract the text (see FONT TABLE FILE section for info on how to create one)
-
 `-input` Can be either a path to a .msg, or a directory containing multiple files.
 
 By default -export will create a .txt file, if you want something easier to process or paste into a spreadsheet, the tool can also export to a Tab Separated Values file (.tsv) by using the argument -tsv.
@@ -45,13 +57,16 @@ HOW TO CONVERT
 Create a .msg from plain text:
 `-convert -font "path/to/font/table.tsv" -input "path/to/plain/text.tsv"`
 
-`-convert` Tells the tool to convert a Tab Separated Values file (.tsv) to a .msg
-`-font` The tool needs a look up table to be able to convert from plain text to hex char values used in the .msg format (see FONT FILE sectiong for info on how to create one)
-`-input` Should point to a single .tsv or a directory containing multiple files.
+`-convert` Tells the tool to convert a Tab Separated Values file (`.tsv`) to a `.msg`
+`-font` The tool needs a look up table to be able to convert from plain text to hex char values used in the `.msg` format (see FONT FILE sectiong for info on how to create one)
+`-input` Should point to a single `.tsv` or a directory containing multiple files.
 
-The .tsv format is expected to be the following:
-`"first text entry"\n"second text entry with\nmultiple lines"` 
-
+The `.tsv` format is expected to be the following:
+```
+"first text entry"
+"second text entry with
+multiple lines in it"
+```
 Note that each text entry is wrapped by double quotes "" and are separated by a \n.
 
 
